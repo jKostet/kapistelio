@@ -19,10 +19,10 @@ function buyCursor(){
 	    lines  -= cursorCost;                                      //removes the cookies spent
     };
     var nextCost = Math.floor(10 * Math.pow(1.1,cursors));       //works out the cost of the next cursor
-    updateCursorStats();
+    updateStats();
 };
 
-function updateCursorStats() {
+function updateStats() {
   document.getElementById('cursors').innerHTML = cursors;       //updates the number of cursors for the user
   document.getElementById('lineCount').innerHTML = lines;       //updates the number of cookies for the user
   document.getElementById('cursorCost').innerHTML = nextCost;   //updates the cursor cost for the user
@@ -50,6 +50,7 @@ function load() {
   // futureproofing
   if (typeof savegame.lines !== "undefined") lines = savegame.lines;
   if (typeof savegame.cursors !== "undefined") cursors = savegame.cursors;
+  updateStats();
 }
 
 function destroySave() {
@@ -60,5 +61,5 @@ function destroySave() {
 function reset() {
   lines = 0;
   cursors = 0;
-  updateCursorStats();
+  updateStats();
 }

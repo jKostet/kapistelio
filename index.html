@@ -16,7 +16,13 @@
     <p>Cursors: <span id="cursors"></span> Price: <span id="cursorCost"></span><button onclick="buyCursor()">Buy Cursor (+0.5 LOC/S)</button>
   </div>
 
-  <button onclick="reset()" id="reset">RESET</button>
+  <div class="dev">
+    <button onclick="reset()" id="reset">RESET GAMESTATE</button>
+    <br>
+    <button onclick="save()" id="savegame">SAVE GAME</button>
+    <button onclick="load()" id="loadGame">LOAD GAME</button>
+    <button onclick="destroySave()" id="destroySave">DESTROY SAVE</button>
+  </div>
 
   <script type="text/javascript" src="game.js"></script>
 </body>

@@ -15,3 +15,13 @@
 #reset {
   background-color: red;
 }
+
+#saveGame {
+  background-color: green;
+}
+#loadGame {
+  background-color: blue;
+}
+#destroySave {
+  background-color: red;
+}
