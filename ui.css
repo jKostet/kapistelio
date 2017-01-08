@@ -11,3 +11,7 @@
   width: 30vw;
   height: auto;
 }
+
+#reset {
+  background-color: red;
+}
