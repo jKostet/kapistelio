@@ -1,1 +1,3 @@
 # kapistelio
+
+Incremental clicker game
