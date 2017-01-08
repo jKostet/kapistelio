@@ -34,6 +34,28 @@ window.setInterval(function(){
   keyboardClick(c)
 }, 1000);
 
+// Save & Load
+var save = {
+  lines: lines,
+  cursors: cursors
+}
+
+function save() {
+  localStorage.setItem("save",JSON.stringify(save));
+}
+
+function load() {
+  var savegame = JSON.parse(localStorage.getItem("save"));
+
+  // futureproofing
+  if (typeof savegame.lines !== "undefined") lines = savegame.lines;
+  if (typeof savegame.cursors !== "undefined") cursors = savegame.cursors;
+}
+
+function destroySave() {
+  localStorage.removeItem("save")
+}
+
 // Dev
 function reset() {
   lines = 0;
