@@ -1,3 +1,13 @@
+Ideas:
+  - drone deliveries
+  - 3d printing
+  - think-makerspace-startups
+  - robotfarms
+  - tyypit oikeit kandei xd
+  - tuttui spessuhahmoi
+  - voi devaa tuttui softii (unimenu yms)
+
+
 Resources:
 Catnip 		-> 	Lines of code : no cap
 Wood 		->	Methods? :D
