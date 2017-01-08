@@ -1,4 +1,4 @@
-Ideas:
+#Ideas:
   - drone deliveries
   - 3d printing
   - think-makerspace-startups
@@ -7,7 +7,13 @@ Ideas:
   - tuttui spessuhahmoi
   - voi devaa tuttui softii (unimenu yms)
 
+#Todo:
+  [ ] Manage get rid of this notes.md, use kanban or something, github projects?
+  [ ] Host somewhere
+  [ ] Get domain
+  [ ] Add Google analytics to stalk visitors
 
+## Game was kinda inspired by kittens game, not sure if I'll use some of these.
 Resources:
 Catnip 		-> 	Lines of code : no cap
 Wood 		->	Methods? :D
