@@ -28,15 +28,6 @@ function updateStats() {
   document.getElementById('cursorCost').innerHTML = cursorCost;   //updates the cursor cost for the user
 }
 
-// at page load
-updateStats();
-
-
-// Game
-window.setInterval(function(){
-  var c = cursors * cursorEfficiency;
-  keyboardClick(c)
-}, 1000);
 
 // Save & Load
 var save = {
@@ -78,3 +69,22 @@ function reset() {
   cursorCost = 10;
   updateStats();
 }
+
+
+// HAS TO BE AT BOTTOM?
+
+// at page load
+//updateStats();
+loadGame();
+
+// Game
+// clicks
+window.setInterval(function(){
+  var c = cursors * cursorEfficiency;
+  keyboardClick(c)
+}, 1000);
+
+// autosave every 5s
+window.setInterval(function(){
+  saveGame();
+}, 5000);
