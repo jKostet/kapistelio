@@ -44,11 +44,21 @@ var save = {
   cursors: cursors
 }
 
-function save() {
-  localStorage.setItem("save",JSON.stringify(save));
+function saveGame() {
+//  console.log("OLD:");
+//  console.log(localStorage.getItem("save"));
+
+  // Update save object
+  save.lines = lines;
+  save.cursors = cursors;
+
+  localStorage.setItem("save", JSON.stringify(save));
+
+//  console.log("NEW:");
+//  console.log(localStorage.getItem("save"));
 }
 
-function load() {
+function loadGame() {
   var savegame = JSON.parse(localStorage.getItem("save"));
 
   // futureproofing
@@ -65,5 +75,6 @@ function destroySave() {
 function reset() {
   lines = 0;
   cursors = 0;
+  cursorCost = 10;
   updateStats();
 }
