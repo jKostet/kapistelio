@@ -25,3 +25,8 @@
 #destroySave {
   background-color: red;
 }
+
+#keyboard:active {
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+}
