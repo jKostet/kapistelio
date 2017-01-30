@@ -1,12 +1,21 @@
+// Keyboard clicks
+var lines = 0;
+
 // Students
 var students = 0;
 
 
 // Coffee
 var coffee = 0;
+var coffeeCost = 10;
 
-// Keyboard clicks
-var lines = 0;
+function buyCoffee() {
+  if(lines >= coffeeCost){
+    lines -= coffeeCost;
+    coffee++;
+    updateStats();
+  }
+}
 
 function keyboardClick(n) {
   lines += n;
