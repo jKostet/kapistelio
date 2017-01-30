@@ -4,10 +4,10 @@ var lines = 0;
 // Students
 var students = 0;
 
-
 // Coffee
 var coffee = 0;
 var coffeeCost = 10;
+var coffeeBonus = 1.01 * students; // Students give +1% production if they (all) have coffee.
 
 function buyCoffee() {
   if(lines >= coffeeCost){
@@ -16,6 +16,20 @@ function buyCoffee() {
     updateStats();
   }
 }
+
+function hasCoffee() {
+  var cost = students * 0.1; // Each student drinks 0.1 units of coffee
+
+  if (coffee >= cost) {
+    coffee -= cost;
+    coffee = Math.round(coffee * 100) / 100;
+    return true;
+  }
+
+  // no coffee = no bonus
+  return false;
+}
+
 
 function keyboardClick(n) {
   lines += n;
@@ -96,6 +110,11 @@ function reset() {
   updateStats();
 }
 
+function addStudent() {
+  students++;
+  updateStats();
+}
+
 
 // HAS TO BE AT BOTTOM?
 
@@ -107,7 +126,13 @@ loadGame();
 // clicks
 window.setInterval(function(){
   var c = cursors * cursorEfficiency;
-  keyboardClick(c)
+
+  if(hasCoffee()) {
+    c += c * coffeeBonus;
+  }
+
+  keyboardClick(c);
+  updateStats();
 }, 1000);
 
 // autosave every 5s
