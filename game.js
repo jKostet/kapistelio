@@ -1,3 +1,7 @@
+// Students
+var students = 0;
+
+
 // Keyboard clicks
 var lines = 0;
 
@@ -26,13 +30,15 @@ function updateStats() {
   document.getElementById('lineCount').innerHTML = lines;       //updates the number of cookies for the user
   //document.getElementById('cursorCost').innerHTML = nextCost;   //updates the cursor cost for the user
   document.getElementById('cursorCost').innerHTML = cursorCost;   //updates the cursor cost for the user
+  document.getElementById('studentCount').innerHTML = students;
 }
 
 
 // Save & Load
 var save = {
   lines: lines,
-  cursors: cursors
+  cursors: cursors,
+  students: students
 }
 
 function saveGame() {
@@ -42,6 +48,7 @@ function saveGame() {
   // Update save object
   save.lines = lines;
   save.cursors = cursors;
+  save.students = students;
 
   localStorage.setItem("save", JSON.stringify(save));
 
@@ -55,6 +62,7 @@ function loadGame() {
   // futureproofing
   if (typeof savegame.lines !== "undefined") lines = savegame.lines;
   if (typeof savegame.cursors !== "undefined") cursors = savegame.cursors;
+  if (typeof savegame.students !== "undefined") cursors = savegame.students;
   updateStats();
 }
 
@@ -67,6 +75,7 @@ function reset() {
   lines = 0;
   cursors = 0;
   cursorCost = 10;
+  students = 0;
   updateStats();
 }
 
