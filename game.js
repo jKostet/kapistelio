@@ -2,6 +2,9 @@
 var students = 0;
 
 
+// Coffee
+var coffee = 0;
+
 // Keyboard clicks
 var lines = 0;
 
@@ -31,6 +34,7 @@ function updateStats() {
   //document.getElementById('cursorCost').innerHTML = nextCost;   //updates the cursor cost for the user
   document.getElementById('cursorCost').innerHTML = cursorCost;   //updates the cursor cost for the user
   document.getElementById('studentCount').innerHTML = students;
+  document.getElementById('coffeeCount').innerHTML = coffee;
 }
 
 
@@ -38,7 +42,8 @@ function updateStats() {
 var save = {
   lines: lines,
   cursors: cursors,
-  students: students
+  students: students,
+  coffee: coffee
 }
 
 function saveGame() {
@@ -49,6 +54,7 @@ function saveGame() {
   save.lines = lines;
   save.cursors = cursors;
   save.students = students;
+  save.coffee = coffee;
 
   localStorage.setItem("save", JSON.stringify(save));
 
@@ -62,7 +68,8 @@ function loadGame() {
   // futureproofing
   if (typeof savegame.lines !== "undefined") lines = savegame.lines;
   if (typeof savegame.cursors !== "undefined") cursors = savegame.cursors;
-  if (typeof savegame.students !== "undefined") cursors = savegame.students;
+  if (typeof savegame.students !== "undefined") students = savegame.students;
+  if (typeof savegame.coffee !== "undefined") coffee = savegame.coffee;
   updateStats();
 }
 
@@ -76,6 +83,7 @@ function reset() {
   cursors = 0;
   cursorCost = 10;
   students = 0;
+  coffee = 0;
   updateStats();
 }
 
