@@ -6,6 +6,7 @@
   - tyypit oikeit kandei xd
   - tuttui spessuhahmoi
   - voi devaa tuttui softii (unimenu yms)
+  - Tech tree = cs kurssit :D "Research Ohjelmoinnin perusteet 5 op"
 
 #Todo:
   [ ] Manage get rid of this notes.md, use kanban or something, github projects?
