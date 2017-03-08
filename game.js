@@ -35,7 +35,7 @@ function hasCoffee() {
 
 function keyboardClick(n) {
   lines += n;
-  document.getElementById("lineCount").innerHTML = lines;
+  updateStats();
 }
 
 // Cursors
@@ -55,7 +55,7 @@ function buyCursor(){
 
 function updateStats() {
   document.getElementById('cursors').innerHTML = cursors;       //updates the number of cursors for the user
-  document.getElementById('lineCount').innerHTML = lines;       //updates the number of cookies for the user
+  document.getElementById('lineCount').innerHTML = Math.floor(lines);       //updates the number of cookies for the user
   document.getElementById('cursorCost').innerHTML = cursorCost;   //updates the cursor cost for the user
   document.getElementById('studentCount').innerHTML = students;
   document.getElementById('coffeeCount').innerHTML = coffee;
