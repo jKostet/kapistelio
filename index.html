@@ -4,10 +4,9 @@
 </head>
 <body>
 
-
   <button onclick="keyboardClick(1)" id="keyboard"><img src="img/c64.jpg" id="c64"></button>
 
-  <div id=code_count>
+  <div id="resources">
     <p>Lines of code:
       <span id="lineCount"></span>
     </p>
@@ -35,6 +34,9 @@
     <button onclick="destroySave()" id="destroySave">DESTROY SAVE</button>
   </div>
 
+  <canvas id="gc" width="640" height="480"></canvas>
+
+
   <script type="text/javascript" src="game.js"></script>
-  <script type="text/javascript" src="ui.js"></script>
+  <script type="text/javascript" src="gc.js"></script>
 </body>
