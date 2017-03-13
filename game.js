@@ -50,8 +50,8 @@ function buyCursor(){
       cursorCost = Math.floor(10 * Math.pow(1.1,cursors));       //works out the cost of the next cursor
 
       updateStats();
-    };
-};
+    }
+}
 
 function updateStats() {
   document.getElementById('cursors').innerHTML = cursors;       //updates the number of cursors for the user
@@ -59,6 +59,7 @@ function updateStats() {
   document.getElementById('cursorCost').innerHTML = cursorCost;   //updates the cursor cost for the user
   document.getElementById('studentCount').innerHTML = students;
   document.getElementById('coffeeCount').innerHTML = coffee;
+  updateCanvas();
 }
 
 
@@ -121,7 +122,7 @@ function addStudent() {
 
 // at page load
 //updateStats();
-loadGame();
+window.onload = loadGame();
 
 // Game
 // clicks
