@@ -1,8 +1,12 @@
 canvas = document.getElementById("gc");
 canvasContext = canvas.getContext("2d");
 
-window.onload = drawBase();
+// window.onload = purkka();
 
+function drawCanvas() {
+  drawBase();
+  updateCanvas();
+}
 
 function drawBase() {
   // console.log("toimiiks canva?");
@@ -10,6 +14,7 @@ function drawBase() {
   canvasContext.fillRect(0,0,canvas.width,canvas.height);
 }
 
+// TODO: make sense of this, atm. only updates coffee pan anyway
 function updateCanvas() {
   drawBase();
 

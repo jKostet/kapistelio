@@ -16,6 +16,7 @@ function buyCoffee() {
     lines -= coffeeCost;
     coffee++;
     updateStats();
+    updateCanvas(); // show rise in coffee level
   }
 }
 
@@ -30,6 +31,7 @@ function hasCoffee() {
     coffee -= cost;
     coffee = Math.round(coffee * 100) / 100;
     updateStats();
+    updateCanvas(); // show decrease in coffee level
     return true;
   }
 
@@ -66,7 +68,8 @@ function updateStats() {
   document.getElementById('cursorCost').innerHTML = cursorCost;       //updates the cursor cost for the user
   document.getElementById('studentCount').innerHTML = students;
   document.getElementById('coffeeCount').innerHTML = coffee;
-  updateCanvas();
+  //updateCanvas(); // canvas should only update when needed.
+                    // atm that's only when coffee amount changes
 }
 
 
@@ -132,8 +135,8 @@ function addStudent() {
 // HAS TO BE AT BOTTOM?
 
 // at page load
-//updateStats();
-window.onload = loadGame();
+// updateStats();
+// window.onload = loadGame();
 
 // Game
 // clicks

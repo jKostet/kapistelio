@@ -32,7 +32,9 @@
     |   |    |   |
 
 # Todo tasks
-  [ ] fix blinking coffee pan
+  [/] fix blinking coffee pan
+      -> now only updates coffee pan when it's level changes
+      -> still blinks when updating..
 
 # Todo meta:
   [ ] Manage get rid of this notes.md, use kanban or something, github projects?
