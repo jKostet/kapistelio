@@ -31,13 +31,16 @@
     |   |    |   |
     |   |    |   |
 
+# Todo tasks
+  [ ] fix blinking coffee pan
 
-# Todo:
+# Todo meta:
   [ ] Manage get rid of this notes.md, use kanban or something, github projects?
   [ ] Host somewhere
   [ ] Get domain
   [ ] Add Google analytics to stalk visitors
-  [ ] ???
+  [ ] Back-end for storing user saves (not just localhost)
+  [ ] Implement save exporting and importing
 
 ## Game was kinda inspired by kittens game, not sure if I'll use some of these.
 Resources:
