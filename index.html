@@ -4,43 +4,67 @@
 </head>
 <body>
 
-  <button onclick="keyboardClick(1)" id="keyboard"><img src="img/c64.jpg" id="c64"></button>
-
-  <div id="resources">
-    <p>Lines of code:
-      <span id="lineCount"></span>
-    </p>
-    <p>Students:
-      <span id="studentCount"></span>
-    </p>
-    <p>Coffee:
-      <span id="coffeeCount"></span>
-    </p>
+  <div id="workArea">
+    <button onclick="keyboardClick(1)" id="keyboard"><img src="img/c64.jpg" id="c64"></button>
   </div>
 
-  <div class="upgrades">
-    <p>Cursors: <span id="cursors"></span> Price: <span id="cursorCost"></span><button onclick="buyCursor()">Buy Cursor (+0.5 LOC/S)</button>
-    <button onclick="buyCoffee()" id="coffeeButton">Buy Coffee</button>
+  <div id="buyArea">
+
+    <div id="resources">
+      <p>Lines of code:
+        <span id="lineCount"></span>
+      </p>
+      <p>Students:
+        <span id="studentCount"></span>
+      </p>
+      <p>Coffee:
+        <span id="coffeeCount"></span>
+      </p>
+    </div>
+
+    <div class="upgrades">
+      <p>Cursors: <span id="cursors"></span> Price: <span id="cursorCost"></span><button onclick="buyCursor()">Buy Cursor (+0.5 LOC/S)</button>
+      <button onclick="buyCoffee()" id="coffeeButton">Buy Coffee</button>
+    </div>
+
+    <div class="dev">
+      Dev controls
+      <br>
+      <button onclick="addStudent()">Add student</button>
+      <button onclick="reset()" id="reset">RESET GAMESTATE</button>
+      <br>
+      <button onclick="saveGame()" id="savegame">SAVE GAME</button>
+      <button onclick="loadGame()" id="loadGame">LOAD GAME</button>
+      <button onclick="destroySave()" id="destroySave">DESTROY SAVE</button>
+    </div>
   </div>
 
-  <div class="dev">
-    Dev controls
+  <div id="viewArea">
+    <canvas id="gc" width="640" height="480"></canvas>
+  </div>
+
+  <div id="researchArea">
+    Courses available
     <br>
-    <button onclick="addStudent()">Add student</button>
-    <button onclick="reset()" id="reset">RESET GAMESTATE</button>
-    <br>
-    <button onclick="saveGame()" id="savegame">SAVE GAME</button>
-    <button onclick="loadGame()" id="loadGame">LOAD GAME</button>
-    <button onclick="destroySave()" id="destroySave">DESTROY SAVE</button>
+    <ul>
+      <li>
+        <button onclick="" id="">Introduction to Programming</button>
+      </li>
+      <li>
+        <button onclick="" id="">Algorithms I</button>
+      </li>
+      <li>
+        <button onclick="" id="">Design Fundamentals</button>
+      </li>
+    </ul>
   </div>
 
-  <canvas id="gc" width="640" height="480"></canvas>
-
+<!-- JS at the end of body -->
   <script type="text/javascript" src="gc.js">
     // window.onload = updateCanvas();
   </script>
 
   <script type="text/javascript" src="game.js">
-//    window.onload = loadGame();
+    // window.onload = loadGame();
   </script>
 </body>
