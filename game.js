@@ -109,21 +109,30 @@ function loadGame() {
   if (typeof savegame.students !== "undefined") students = savegame.students;
   if (typeof savegame.coffee !== "undefined") coffee = savegame.coffee;
   updateStats();
+
 }
 
 function destroySave() {
-  localStorage.removeItem("save")
+  confirmation = confirm("This will destroy your save. Are you sure?");
+  console.log(confirmation);
+  if (confirmation) {
+    localStorage.removeItem("save");
+  }
 }
 
 // Dev
-function reset() {
-  lines = 0;
-  income = 0;
-  cursors = 0;
-  cursorCost = 10;
-  students = 0;
-  coffee = 0;
-  updateStats();
+function resetGameState() {
+  confirmation = confirm("This will reset the game. Are you sure?");
+  console.log(confirmation);
+  if (confirmation) {
+    lines = 0;
+    income = 0;
+    cursors = 0;
+    cursorCost = 10;
+    students = 0;
+    coffee = 0;
+    updateStats();
+  }
 }
 
 function addStudent() {
