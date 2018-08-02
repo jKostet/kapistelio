@@ -1,5 +1,37 @@
 
 
+
+#main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "buyArea viewArea researchArea"
+                        "buyArea workArea researchArea";
+  grid-gap: 1em;
+}
+
+#main div {
+  justify-self: center;
+  align-self: center;
+  background-color: #c0c0c0c0;
+  padding: 10px;
+}
+
+#buyArea {
+  grid-area: buyArea;
+}
+
+#viewArea {
+  grid-area: viewArea;
+}
+
+#workArea {
+  grid-area: workArea;
+}
+
+#researchArea {
+  grid-area: researchArea;
+}
+
 #keyboard {
   /*width: 10px;
   height: auto;

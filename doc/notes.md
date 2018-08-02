@@ -35,6 +35,7 @@
   [/] fix blinking coffee pan
       -> now only updates coffee pan when it's level changes
       -> still blinks when updating..
+  [ ] Implement offline (game closed) income, maxing out at maybe 72h?
 
 # Todo meta:
   [ ] Manage get rid of this notes.md, use kanban or something, github projects?
