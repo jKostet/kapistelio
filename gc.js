@@ -25,15 +25,15 @@ function updateCanvas() {
   img.src = "img/coffee2.png";
 
   img.onload = function() {
-    canvasContext.drawImage(img,200,200,140,100);
+    canvasContext.drawImage(img,30,350,140,100);
   }
 
   canvasContext.fillStyle = "#420b0b";
 
   if (g <= 90) {
-    canvasContext.fillRect(225,290,95,(-g));
+    canvasContext.fillRect(55,440,95,(-g));
   } else {
-    canvasContext.fillRect(225,290,95,(-80));
+    canvasContext.fillRect(55,440,95,(-80));
   }
 
 }

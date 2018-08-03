@@ -1,4 +1,6 @@
-
+body {
+  background-color: grey;
+}
 
 
 #main {
@@ -18,6 +20,7 @@
 
 #buyArea {
   grid-area: buyArea;
+  height: 100vh;
 }
 
 #viewArea {
@@ -30,6 +33,7 @@
 
 #researchArea {
   grid-area: researchArea;
+  height: 100vh;
 }
 
 #keyboard {
