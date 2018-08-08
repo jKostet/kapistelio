@@ -48,6 +48,11 @@ body {
   height: auto;
 }
 
+.icon {
+  width: 64px;
+  height: 64px;
+}
+
 #reset {
   background-color: red;
 }
