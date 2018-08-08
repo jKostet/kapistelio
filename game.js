@@ -42,6 +42,8 @@ function hasCoffee() {
 
 function keyboardClick(n) {
   n = Math.floor(n);
+  // TODO: Save income decimals
+  // n = n.toFixed(2);
   lines += n;
   updateStats();
 }
@@ -147,6 +149,20 @@ function addStudent() {
 // updateStats();
 // window.onload = loadGame();
 
+function calculateIncomeBonuses() {
+  var incomeWithBonus = income;
+
+  // Coffee bonus
+  if(students > 0 && hasCoffee()) {
+    var bonus = 1 + (coffeeBonus * students); // Production +1% for each student
+    incomeWithBonus = income * bonus;  
+  }
+
+  return incomeWithBonus;
+
+}
+
+
 // Game
 // clicks
 window.setInterval(function(){
@@ -154,10 +170,7 @@ window.setInterval(function(){
   // calculate income: loc/s
   income = cursors * cursorEfficiency;
 
-  if(students > 0 && hasCoffee()) {
-    var bonus = 1 + (coffeeBonus * students); // Production bonus +1% for each student
-    income = income * bonus;
-  }
+  income = calculateIncomeBonuses()
 
   keyboardClick(income);
   updateStats();
