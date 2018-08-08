@@ -81,7 +81,8 @@ var save = {
   income: income,
   cursors: cursors,
   students: students,
-  coffee: coffee
+  coffee: coffee,
+  time: -1,
 }
 
 function saveGame() {
@@ -94,6 +95,7 @@ function saveGame() {
   save.cursors = cursors;
   save.students = students;
   save.coffee = coffee;
+  save.time = Date.now();
 
   localStorage.setItem("save", JSON.stringify(save));
 
@@ -111,6 +113,21 @@ function loadGame() {
   if (typeof savegame.students !== "undefined") students = savegame.students;
   if (typeof savegame.coffee !== "undefined") coffee = savegame.coffee;
   updateStats();
+
+  checkOfflineProgress(savegame.time);
+}
+
+function checkOfflineProgress(saveTime) {
+  // Players gain 30% offline income for maximum of 72 hours.
+  var timeNow = Date.now();
+  var timeOffline = timeNow - saveTime;
+
+  var maxTimeOffine = 72*60*60*100; // 72 hours to milliseconds
+
+  if (timeOffline > maxTimeOffine) {
+
+  }
+
 
 }
 

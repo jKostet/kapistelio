@@ -35,7 +35,11 @@
   [/] fix blinking coffee pan
       -> now only updates coffee pan when it's level changes
       -> still blinks when updating..
-  [ ] Implement offline (game closed) income, maxing out at maybe 72h?
+  [ ] Implement time manager for timed tasks etc.
+    [ ] Implement offline (game closed) income, maxing out at maybe 72h?
+    [ ] 1min = 1 hour game time, students drink 1 cup of coffee / hour
+  [ ] Refactor game.js into different files for clarity
+      // ie. Save/Load game logic should be it's own thing.
 
 # Todo meta:
   [ ] Manage get rid of this notes.md, use kanban or something, github projects?
