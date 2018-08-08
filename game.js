@@ -122,11 +122,22 @@ function checkOfflineProgress(saveTime) {
   var timeNow = Date.now();
   var timeOffline = timeNow - saveTime;
 
-  var maxTimeOffine = 72*60*60*100; // 72 hours to milliseconds
+  var maxTimeOffine = 72*60*60*1000; // 72 hours to milliseconds
+  var offlineIncomeSeconds = 0;
 
   if (timeOffline > maxTimeOffine) {
-
+    offlineIncomeSeconds = maxTimeOffine / 1000.0;
+  } else {
+    offlineIncomeSeconds = timeOffline / 1000.0;
   }
+
+  var offlineIncome = offlineIncomeSeconds * income * 0.30;
+      offlineIncome = Math.floor(offlineIncome);
+
+  alert("You've gained offline income of " + offlineIncome + " locs.");
+
+  // gain offline income
+  keyboardClick(offlineIncome);
 
 
 }
@@ -172,7 +183,7 @@ function calculateIncomeBonuses() {
   // Coffee bonus
   if(students > 0 && hasCoffee()) {
     var bonus = 1 + (coffeeBonus * students); // Production +1% for each student
-    incomeWithBonus = income * bonus;  
+    incomeWithBonus = income * bonus;
   }
 
   return incomeWithBonus;
